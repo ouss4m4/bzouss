@@ -6,7 +6,7 @@ module.exports = {
       summary: `Web App Developer striving for clean code architecture`,
     },
     description: `Every Developer Journey should be accompanied by a blog for self improvement and helping others`,
-    siteUrl: `https://bzouss.com/`,
+    siteUrl: `https://bzouss.com`,
     social: {
       twitter: `0uss4m4`,
     },
@@ -69,8 +69,14 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `bzouss`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-dark-mode'
+    "gatsby-plugin-dark-mode",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
