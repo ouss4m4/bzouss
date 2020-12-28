@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import DiscusArea from "../components/disqus"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -30,6 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
+        <DiscusArea location={location} title={post.frontmatter.title} id={post.frontmatter.date}/>
         <footer>
           <Bio />
         </footer>
