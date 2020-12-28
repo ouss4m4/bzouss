@@ -44,7 +44,7 @@
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
-  --lineHeight-relaxed: 1.625;
+  --lineHeight-relaxed: 1.75;
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
@@ -82,6 +82,18 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
 }
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  background: #282c35;
+  --header: #fff;
+  color: var(--color-text);
+  /* --textTitle: #fff;
+  --textLink: var(--pink);
+  --hr: hsla(0, 0%, 100%, 0.2);
+  --inlineCode-bg: rgba(115, 124, 153, 0.2);
+  --inlineCode-text: #e6e6e6;
+  --form-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637); */
+}
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
@@ -114,7 +126,7 @@ h4,
 h5,
 h6 {
   font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
+  color: inherit;
 }
 
 h1 {
@@ -288,6 +300,7 @@ a:focus {
 
 .bio {
   display: flex;
+  align-items: center;
   margin-bottom: var(--spacing-16);
 }
 
