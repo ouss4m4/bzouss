@@ -13,9 +13,9 @@ const LandingPage = ({ data, location }) => {
   const bg = data.file.childImageSharp.fluid
   return (
     <div className="lander">
-      <div className="overlay"></div>
+      {/* <div className="overlay"></div> */}
       {/* <Image  fluid={bg} /> */}
-      <img className="bg-image" src={splash} />
+      {/* <img className="bg-image" src={splash} role="background" /> */}
       <div className="intro">
         <h1 id="title">{data.site.siteMetadata.title}</h1>
         <p id="subtitle">
@@ -25,7 +25,7 @@ const LandingPage = ({ data, location }) => {
         <p>
           I like to write about my progress and different complexity i face in
           my daily work, and how i troubleshoot the problems i encounter and
-          provide a solid solution. {" "}
+          provide a solid solution.{" "}
           <Link to={"/blog"}>
             <span>Read my blog</span>
           </Link>
