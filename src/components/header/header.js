@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import "./header.css"
 
 export default function Header() {
@@ -19,17 +19,17 @@ export default function Header() {
         </Link>
 
         <ThemeToggler>
-        {({ theme, toggleTheme }) => (
-          <label>
-            <input
-              type="checkbox"
-              onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-              checked={theme === 'dark'}
-            />{' '}
-            Dark mode
-          </label>
-        )}
-      </ThemeToggler>
+          {({ theme, toggleTheme }) => (
+            <label>
+              <input
+                type="checkbox"
+                onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+                checked={theme === "dark"}
+              />
+              🔆
+            </label>
+          )}
+        </ThemeToggler>
       </div>
     </div>
   )
