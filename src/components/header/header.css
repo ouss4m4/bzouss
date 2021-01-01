@@ -1,12 +1,77 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: var(--maxWidth-4xl);
-    margin: 0 auto;
-    padding: 12px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--maxWidth-4xl);
+  margin: 0 auto;
+  padding: 12px 4px;
 }
 
 .navbar h1 {
-    margin: 0;
+  margin: 0;
+}
+
+.links {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0 12px;
+  font-weight: bold;
+}
+
+.bg-image {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(61 20 20 / 22%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+
+.lander {
+  display: flex column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: var(--maxWidth-4xl);
+  margin: 0 auto;
+}
+
+.intro {
+  display: flex column;
+}
+
+#title {
+  font-size: 4em;
+  color: var(--intro-color);
+}
+
+#subtitle {
+  color: var(--intro-color);
+  font-size: 2em;
+  padding-right: 12px;
+}
+
+.card a {
+  text-align: center;
+}
+.intro p {
+  color: var(--intro-color);
 }

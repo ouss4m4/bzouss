@@ -60,7 +60,8 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
-  --bg: white
+  --bg: white;
+  --intro-color: #dadada;
 }
 
 /* HTML elements */
@@ -86,7 +87,7 @@ body {
 }
 
 body.dark {
-  --bg: #282c35
+  --bg: #282c35;
 }
 
 footer {
