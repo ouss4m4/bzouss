@@ -60,6 +60,7 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --bg: white
 }
 
 /* HTML elements */
@@ -81,18 +82,11 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--bg);
 }
+
 body.dark {
-  -webkit-font-smoothing: antialiased;
-  background: #282c35;
-  --header: #fff;
-  color: var(--color-text);
-  /* --textTitle: #fff;
-  --textLink: var(--pink);
-  --hr: hsla(0, 0%, 100%, 0.2);
-  --inlineCode-bg: rgba(115, 124, 153, 0.2);
-  --inlineCode-text: #e6e6e6;
-  --form-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637); */
+  --bg: #282c35
 }
 
 footer {
