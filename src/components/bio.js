@@ -54,7 +54,7 @@ const Bio = () => {
       {author?.name && (
         <>
           <p>
-            by <strong>{author.name}</strong> 
+            by <strong>{author.name.toUpperCase()}</strong> 
             <br />
             {author?.summary || null} <br /> <a href={`https://twitter.com/${social?.twitter || ``}`}>
               Follow me on Twitter

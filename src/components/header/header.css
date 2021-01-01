@@ -1,0 +1,12 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--maxWidth-4xl);
+    margin: 0 auto;
+    padding: 12px 4px;
+}
+
+.navbar h1 {
+    margin: 0;
+}
