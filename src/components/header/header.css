@@ -47,20 +47,21 @@
 }
 
 .lander {
-  display: flex column;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: var(--maxWidth-4xl);
-  margin: 0 auto;
+  background: #282c35;
+  width: 100vw;
+  height: 100vh;
 }
 
 .intro {
   display: flex column;
+  max-width: var(--maxWidth-4xl);
+  margin: 0 auto;
 }
 
 #title {
   font-size: 4em;
   color: var(--intro-color);
+  margin: 0;
 }
 
 #subtitle {
