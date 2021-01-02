@@ -7,13 +7,15 @@ export default function Header() {
   return (
     <div className="navbar">
       <div className="logo">
-        <h1> BZ Ouss</h1>
+        <Link to={"/blog"} itemProp="url">
+          <h1> BLOG </h1>
+        </Link>
       </div>
 
       <div className="links">
-        <Link to={"/blog"} itemProp="url">
+        {/* <Link to={"/blog"} itemProp="url">
           <span itemProp="headline">Blog</span>
-        </Link>
+        </Link> */}
         <Link to={"/"} itemProp="url">
           <span itemProp="headline">About Me</span>
         </Link>
