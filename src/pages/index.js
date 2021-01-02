@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import splash from "../../content/assets/splash.jpeg"
 
 import {
   AiFillTwitterCircle,
@@ -13,9 +12,6 @@ const LandingPage = ({ data, location }) => {
   const bg = data.file.childImageSharp.fluid
   return (
     <div className="lander">
-      {/* <div className="overlay"></div> */}
-      {/* <Image  fluid={bg} /> */}
-      {/* <img className="bg-image" src={splash} role="background" /> */}
       <div className="intro">
         <h1 id="title">{data.site.siteMetadata.title}</h1>
         <p id="subtitle">
@@ -26,14 +22,25 @@ const LandingPage = ({ data, location }) => {
           I like to write about my progress and different complexity i face in
           my daily work, and how i troubleshoot the problems i encounter and
           provide a solid solution.{" "}
-          <Link to={"/blog"}>
+          <Link to={"/blog"} id="blog-link">
             <span>Read my blog</span>
           </Link>
         </p>
-        <p>
-          Contact Me: <AiFillGithub /> <AiFillTwitterCircle />{" "}
-          <AiFillLinkedin /> <SiGmail />{" "}
-        </p>
+        <div className="social">
+          <a href="https://github.com/ouss4m4" className="icon">
+            <AiFillGithub size={50} />{" "}
+          </a>
+          <a href="https://twitter.com/0uss4m4" className="icon">
+            {" "}
+            <AiFillTwitterCircle size={50} />{" "}
+          </a>
+          <a herf="www.linkedin.com/in/bzouss" className="icon">
+            <AiFillLinkedin size={50} />
+          </a>
+          <a className="icon">
+            <SiGmail size={50} />{" "}
+          </a>
+        </div>
       </div>
     </div>
   )

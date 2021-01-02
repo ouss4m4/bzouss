@@ -4,7 +4,7 @@ date: "2020-12-30"
 description: What is a blog post good for if you can not Disqus it.
 ---
 
-In a previous [post](http://bzouss.com/blog-idea/) i shared my thoughts on why you should create a blog as a developer. specially if you are still on a learning path and would like to improve steadily.
+In a previous [post](http://bzouss.com/blog/blog-idea) i shared my thoughts on why you should create a blog as a developer. specially if you are still on a learning path and would like to improve steadily.
 
 Right after publishing my blog. the next thing i looked for was the easiest way to add a comments. visitors should be able to comment or ask questions and express their views on what i’ve written. and the Gatsbyjs official documentation recommends many options for adding comment functionality, several of them specifically targeted at static sites.
 
@@ -16,72 +16,81 @@ First you need to create an account with [Disqus](disqus.com) and pick a plan. t
 
 then install the plugin.
 
-    yarn add gatsby-plugin-disqus
+```ubuntu
+yarn add gatsby-plugin-disqus
+```
 
 or using npm
 
-    npm install -S gatsby-plugin-disqus
+```node
+npm install -S gatsby-plugin-disqus
+```
 
 Add the plugin to your gatsby-config.js file with your **Disqus shortname**.
 
 > Make sure to replace the EXAMPLE inside options with the shortname for your own forum.
 
-    // gatsby-config.js
-    module.exports = {
-        plugins: [
-            {
-                resolve: `gatsby-plugin-disqus`,
-                options: {
-                    shortname: `EXAMPLE`
-                }
-            },
-        ]
-    }
+```javascript
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `EXAMPLE`,
+      },
+    },
+  ],
+}
+```
 
 i created a component called DiscusArea
 
-    import React from "react"
-    import { useStaticQuery } from "gatsby"
-    import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+```jsx
+import React from "react"
+import { useStaticQuery } from "gatsby"
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
-    const DiscusArea = ({ id, title, location }) => {
-    const data = useStaticQuery(graphql`
-        query {
-        site {
-            siteMetadata {
-            title
-            siteUrl
-            }
+const DiscusArea = ({ id, title, location }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          siteUrl
         }
-        }
-    `)
-    const siteUrl = data.site.siteMetadata?.siteUrl
-    let disqusConfig = {
-        url: `${siteUrl + location.pathname}`,
-        identifier: id,
-        title: title,
+      }
     }
+  `)
+  const siteUrl = data.site.siteMetadata?.siteUrl
+  let disqusConfig = {
+    url: `${siteUrl + location.pathname}`,
+    identifier: id,
+    title: title,
+  }
 
-    return (
-        <>
-        <CommentCount config={disqusConfig} placeholder={"..."} />
-        <Disqus config={disqusConfig} />
-        </>
-    )
-    }
+  return (
+    <>
+      <CommentCount config={disqusConfig} placeholder={"..."} />
+      <Disqus config={disqusConfig} />
+    </>
+  )
+}
 
-    export default DiscusArea
+export default DiscusArea
+```
 
 The plugin can then be used to place the Disqus comment section anywhere in your page. i placed mine inside the `blog-post.js` file that gatsby use to generate pages posts. right after the Markdown content.
-
-    // blog-post.js
-    ...
-    <DiscusArea
-        location={location}
-        title={post.frontmatter.title}
-        id={post.frontmatter.date}
-    />
-    ...
+```jsx
+// blog-post.js
+...
+<DiscusArea
+    location={location}
+    title={post.frontmatter.title}
+    id={post.frontmatter.date}
+/>
+...
+```
 
 reload the page and you should see comments area at the bottom of your page.
 

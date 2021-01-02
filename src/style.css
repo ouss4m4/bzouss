@@ -59,7 +59,7 @@
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #005b99;
   --bg: white;
   --intro-color: #dadada;
 }
@@ -75,22 +75,19 @@
 html {
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: var(--font-body);
-  font-size: var(--fontSize-1);
   color: var(--color-text);
   background-color: var(--bg);
 }
 
 body.dark {
   --bg: #282c35;
-  -webkit-font-smoothing: antialiased;
-  --bg: #282c35;
-  --bg-secondary: #363c48;
   --color-heading: #fff;
   --textNormal: hsla(0, 0%, 100%, 0.88);
   --color-text: rgba(255, 255, 255, 0.88);
@@ -99,6 +96,9 @@ body.dark {
   --inlineCode-bg: rgba(115, 124, 153, 0.2);
   --inlineCode-text: #e6e6e6;
   --form-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
+  --color-accent: #ff42d6;
+  --color-heading: #ff42d6;
+  --color-text-light: #dadada;
 }
 
 footer {
@@ -162,7 +162,7 @@ h6 {
 }
 
 h1 > a {
-  color: inherit;
+  color: var(--color-heading);
   text-decoration: none;
 }
 
@@ -172,7 +172,7 @@ h4 > a,
 h5 > a,
 h6 > a {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-heading);
 }
 
 /* Prose */
@@ -248,7 +248,8 @@ table thead tr th {
 /* Link */
 
 a {
-  color: var(--color-primary);
+  color: var(--color-accent);
+  text-decoration: none;
 }
 
 a:hover,
@@ -338,6 +339,48 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.lander {
+  background: #282c35;
+  width: 100vw;
+  height: 100vh;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--maxWidth-4xl);
+  height: 80vh;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  padding: 0 8px;
+}
+
+#title {
+  font-size: 4em;
+  color: var(--intro-color);
+  margin: 0;
+}
+
+#subtitle {
+  color: var(--intro-color);
+  font-size: 2em;
+}
+
+.card a {
+  text-align: center;
+}
+.intro p {
+  color: var(--intro-color);
+}
+
+.icon {
+  padding: 0 15px;
+}
+
+#blog-link {
+  text-decoration: none;
+  color: var(--color-accent);
+}
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -348,5 +391,26 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+
+  #title {
+    font-size: 2em;
+    color: var(--intro-color);
+    margin: 0;
+  }
+
+  #subtitle {
+    color: var(--intro-color);
+    font-size: 1em;
+    padding-right: 12px;
+  }
+
+  .card a {
+    text-align: center;
+    font-size: 1em;
+  }
+  .intro p {
+    color: var(--intro-color);
+    font-size: 1em;
   }
 }
