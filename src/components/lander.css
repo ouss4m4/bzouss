@@ -1,0 +1,69 @@
+.lander {
+  --maxWidth-4xl: 56rem;
+  --intro-color: #dadada;
+  --color-accent: #ff42d6;
+}
+
+.lander {
+  width: 100vw;
+  height: 100vh;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--maxWidth-4xl);
+  height: 80vh;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  padding: 0 8px;
+}
+
+#title {
+  font-size: 4em;
+  color: var(--intro-color);
+  margin: 0;
+}
+
+#subtitle {
+  color: var(--intro-color);
+  font-size: 2em;
+}
+
+.intro p {
+  color: var(--intro-color);
+}
+
+.icon {
+  padding: 0 15px;
+  color: var(--color-accent);
+
+}
+
+#blog-link {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+@media (max-width: 42rem) {
+  #title {
+    font-size: 2em;
+    color: var(--intro-color);
+    margin: 0;
+  }
+
+  #subtitle {
+    color: var(--intro-color);
+    font-size: 1em;
+    padding-right: 12px;
+  }
+
+  .card a {
+    text-align: center;
+    font-size: 1em;
+  }
+  .intro p {
+    color: var(--intro-color);
+    font-size: 1em;
+  }
+}

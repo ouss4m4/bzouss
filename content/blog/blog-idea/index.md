@@ -18,7 +18,8 @@ it is the Static Page Generator of choice ! and much more.
 with more than 2000+ plugins available and 489 Starters. I used the marvelous [Gatsby Starter Blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog/)
 written by Kyle Mathews. it was as simple as writing
 
-    gatsby new bzouss https://github.com/gatsbyjs/gatsby-starter-blog  
+    gatsby new bzouss https://github.com/gatsbyjs/gatsby-starter-blog
+
 and my blog was up and running in no time. took me a minute to figure out how it was all bootstrapped. then i dived a little bit inside the installed packages and i can only say it is amazing to be able to "Create blazing fast websites" in no time.
 
 ## Amazon Amplify
@@ -30,16 +31,28 @@ AWS offers tons of services but the one that matters for the moment is Amplify !
 
 it was so easy to setup, and with the automatic config detection you only need to connect Amplify to your github account. (they support other git sources) pick a repository. select a branch you would like to build. and in no time you will have your website up and running. and Continuous deploys set up. each time you push to your branch (master usually) it will deploy again automatically.
 
-
-## Conclusion 
+## Conclusion
 
 I can only blame myself for delaying this all these years. writing articles is a skill every developer or student should learn. write for yourself. write to help people. write to improve your self esteem.
 in this one article i am writing i think i found my new "Cool Off From Coding" trick. it is really relaxing writing about something you love. i have my first GatsbyJS Project added to my github. and now that i discovered how easy it is to setup Amazon Amplify. i will be using it a lot.
 
-so what are you waiting for ? go create your blog right now ! 
+so what are you waiting for ? go create your blog right now !
 
-* Gatsbyjs
-* Amazon Amplify
-* Happy Hacking
+- Gatsbyjs
+- Amazon Amplify
+- Happy Hacking
 
-> Oh it even gets prettier if you decide to use Netlify. i have to use netlify sometime soon ! 
+## N.B: Amplify Rewrites
+
+if you are having problems with refreshing the page on a nested route leading you back to the home page. i solved mine by removing all the "Rewrites & Redirects" from Amplify and setting only one rule as follow
+
+```json
+[
+  {
+    "source": "</^[^.]+$|.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>",
+    "target": "/index.html",
+    "status": "404-200",
+    "condition": null
+  }
+]
+```

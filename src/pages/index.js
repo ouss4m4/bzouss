@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Image from "gatsby-image"
 
 import {
   AiFillTwitterCircle,
@@ -7,11 +8,23 @@ import {
   AiFillGithub,
 } from "react-icons/ai"
 import { SiGmail } from "react-icons/si"
+import "../components/lander.css"
 
 const LandingPage = ({ data, location }) => {
   const bg = data.file.childImageSharp.fluid
   return (
     <div className="lander">
+      <Image
+        fluid={bg}
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          width: "100vw",
+          height: "100vh",
+          zIndex: "-3",
+        }}
+      />
       <div className="intro">
         <h1 id="title">{data.site.siteMetadata.title}</h1>
         <p id="subtitle">
@@ -21,24 +34,23 @@ const LandingPage = ({ data, location }) => {
         <p>
           I like to write about my progress and different complexity i face in
           my daily work, and how i troubleshoot the problems i encounter and
-          provide a solid solution.{" "}
+          provide a solid solution.
           <Link to={"/blog"} id="blog-link">
             <span>Read my blog</span>
           </Link>
         </p>
         <div className="social">
           <a href="https://github.com/ouss4m4" className="icon">
-            <AiFillGithub size={50} />{" "}
+            <AiFillGithub size={50} />
           </a>
           <a href="https://twitter.com/0uss4m4" className="icon">
-            {" "}
-            <AiFillTwitterCircle size={50} />{" "}
+            <AiFillTwitterCircle size={50} />
           </a>
-          <a herf="www.linkedin.com/in/bzouss" className="icon">
+          <a href="https://linkedin.com/in/bzouss" className="icon">
             <AiFillLinkedin size={50} />
           </a>
           <a className="icon">
-            <SiGmail size={50} />{" "}
+            <SiGmail size={50} />
           </a>
         </div>
       </div>
