@@ -1,13 +1,54 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useEffect } from "react"
+/* import { Link } from "gatsby"
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai"
 import { SiGmail } from "react-icons/si"
+import Projects from "../components/portfolio/projects"
+*/
 
 const LandingPage = ({ data, location }) => {
+  const aboutRef = React.useRef(null)
+  const expRef = React.useRef(null)
+  const projRef = React.useRef(null)
+  const skillRef = React.useRef(null)
+  const toolsRef = React.useRef(null)
+  const contactRef = React.useRef(null)
+
+  useEffect(() => {
+    let observer
+    if (aboutRef && expRef && projRef && skillRef && toolsRef && contactRef) {
+      const options = {
+        threshold: 0.5,
+      }
+      observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          const navElement = document.querySelector(
+            `a[href="#${entry.target.id}"]`
+          )
+
+          if (entry.isIntersecting) {
+            if (!navElement.classList.contains("active")) {
+              navElement.classList.add("active")
+            }
+          } else if (navElement.classList.contains("active")) {
+            navElement.classList.remove("active")
+          }
+        })
+      }, options)
+
+      observer.observe(aboutRef.current)
+      observer.observe(expRef.current)
+      observer.observe(projRef.current)
+      observer.observe(skillRef.current)
+      observer.observe(toolsRef.current)
+      observer.observe(contactRef.current)
+    }
+    return () => observer.disconnect()
+  }, [aboutRef, expRef, projRef, skillRef, toolsRef, contactRef])
+
   return (
     <>
       <div className="container">
@@ -19,19 +60,32 @@ const LandingPage = ({ data, location }) => {
                 <h1 id="title">{data.site.siteMetadata.title}</h1>
               </div>
               <nav>
-                <ul className="flex-column gap-8">
-                  <li>About</li>
-                  <li>Experience</li>
-                  <li>Projects</li>
-                  <li>Toolset</li>
-                  <li>Contact</li>
+                <ul className="flex-col gap-8">
+                  <a className="block" href="#about">
+                    About
+                  </a>
+                  <a className="block" href="#experience">
+                    Experience
+                  </a>
+                  <a className="block" href="#projects">
+                    Projects
+                  </a>
+                  <a className="block" href="#skills">
+                    Skills
+                  </a>
+                  <a className="block" href="#tools">
+                    Tools
+                  </a>
+                  <a className="block" href="#contact">
+                    Contact
+                  </a>
                 </ul>
               </nav>
             </div>
           </div>
           {/* Main Content */}
           <main className="overflow-y-auto max-h-screen no-scrollbar">
-            <section id="about" className="min-h-screen">
+            <section ref={aboutRef} id="about" className="min-h-screen">
               <div className="container">
                 <h1>Baaziz Oussama</h1>
                 <p>
@@ -41,31 +95,114 @@ const LandingPage = ({ data, location }) => {
                   dolorum, excepturi, incidunt aliquam voluptatum voluptas
                   alias.
                 </p>
+                <hr />
+                <br />
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
               </div>
             </section>
-            <section id="experience" className="min-h-screen">
+            <section ref={expRef} id="experience" className="min-h-screen">
               <div className="container">
                 <h1>Experience</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
+                <hr />
+                <br />
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
               </div>
             </section>
-            <section id="projects" className="min-h-screen">
+            <section ref={projRef} id="projects" className="min-h-screen">
               <div className="container">
-                <h1>Projects</h1>
+                <div className="card">
+                  <h1>Projects</h1>
+                  <h3>SnapShot</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptate animi soluta quasi atque laudantium possimus cum
+                    maxime obcaecati illo deleniti exercitationem at facere
+                    dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                    alias.
+                  </p>
+                </div>
               </div>
             </section>
-            <section id="skills" className="min-h-screen">
+            <section ref={skillRef} id="skills" className="min-h-screen">
               <div className="container">
                 <h1>Skills</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
+                <hr />
+                <br />
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
               </div>
             </section>
-            <section id="Toolset" className="min-h-screen">
+            <section ref={toolsRef} id="tools" className="min-h-screen">
               <div className="container">
                 <h1>Tools</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
+                <hr />
+                <br />
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
               </div>
             </section>
-            <section id="contact" className="min-h-screen">
+            <section ref={contactRef} id="contact" className="min-h-screen">
               <div className="container">
                 <h1>Contact</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
+                <hr />
+                <br />
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
               </div>
             </section>
           </main>
