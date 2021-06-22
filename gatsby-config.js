@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `BZouss`,
     author: {
-      name: `Baaziz Ouss`,
-      summary: `Web App Developer with a passion for clean code architecture and design patterns`,
+      name: `Baaziz Oussama`,
+      summary: `Software Developer with a passion for clean code architecture and design patterns`,
     },
-    description: `Every Developer Journey should be accompanied by a blog for self improvement and helping others`,
+    description: `Baaziz Oussama: Automation is life <3`,
     siteUrl: `https://bzouss.com`,
     social: {
       twitter: `0uss4m4`,
@@ -77,6 +77,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-dark-mode",
+    `gatsby-plugin-postcss`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

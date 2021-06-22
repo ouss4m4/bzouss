@@ -1,60 +1,77 @@
 import React from "react"
 import { Link } from "gatsby"
-import Image from "gatsby-image"
-
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai"
 import { SiGmail } from "react-icons/si"
-import "../components/lander.css"
 
 const LandingPage = ({ data, location }) => {
-  const bg = data.file.childImageSharp.fluid
   return (
-    <div className="lander">
-      <Image
-        fluid={bg}
-        style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          width: "100vw",
-          height: "100vh",
-          zIndex: "-3",
-        }}
-      />
-      <div className="intro">
-        <h1 id="title">{data.site.siteMetadata.title}</h1>
-        <p id="subtitle">
-          Hello. I am Ouss. I build web applications to help businesses with
-          digitalization and modern constraints
-        </p>
-        <p>
-          I like to write about my progress and different complexity i face in
-          my daily work, and how i troubleshoot the problems i encounter and
-          provide a solid solution.
-          <Link to={"/blog"} id="blog-link">
-            <span>Read my blog</span>
-          </Link>
-        </p>
-        <div className="social">
-          <a href="https://github.com/ouss4m4" className="icon">
-            <AiFillGithub size={50} />
-          </a>
-          <a href="https://twitter.com/0uss4m4" className="icon">
-            <AiFillTwitterCircle size={50} />
-          </a>
-          <a href="https://linkedin.com/in/bzouss" className="icon">
-            <AiFillLinkedin size={50} />
-          </a>
-          <a className="icon">
-            <SiGmail size={50} />
-          </a>
+    <>
+      <div className="container">
+        <div className="flex">
+          {/* SideBar */}
+          <div className="border-r-2 w-60 h-screen">
+            <div className="flex-column">
+              <div className="my-14">
+                <h1 id="title">{data.site.siteMetadata.title}</h1>
+              </div>
+              <nav>
+                <ul className="flex-column gap-8">
+                  <li>About</li>
+                  <li>Experience</li>
+                  <li>Projects</li>
+                  <li>Toolset</li>
+                  <li>Contact</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          {/* Main Content */}
+          <main className="overflow-y-auto max-h-screen no-scrollbar">
+            <section id="about" className="min-h-screen">
+              <div className="container">
+                <h1>Baaziz Oussama</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate animi soluta quasi atque laudantium possimus cum
+                  maxime obcaecati illo deleniti exercitationem at facere
+                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
+                  alias.
+                </p>
+              </div>
+            </section>
+            <section id="experience" className="min-h-screen">
+              <div className="container">
+                <h1>Experience</h1>
+              </div>
+            </section>
+            <section id="projects" className="min-h-screen">
+              <div className="container">
+                <h1>Projects</h1>
+              </div>
+            </section>
+            <section id="skills" className="min-h-screen">
+              <div className="container">
+                <h1>Skills</h1>
+              </div>
+            </section>
+            <section id="Toolset" className="min-h-screen">
+              <div className="container">
+                <h1>Tools</h1>
+              </div>
+            </section>
+            <section id="contact" className="min-h-screen">
+              <div className="container">
+                <h1>Contact</h1>
+              </div>
+            </section>
+          </main>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
@@ -89,3 +106,20 @@ export const pageQuery = graphql`
     }
   }
 `
+
+{
+  /* <div className="social">
+          <a href="https://github.com/ouss4m4" className="icon">
+            <AiFillGithub size={50} />
+          </a>
+          <a href="https://twitter.com/0uss4m4" className="icon">
+            <AiFillTwitterCircle size={50} />
+          </a>
+          <a href="https://linkedin.com/in/bzouss" className="icon">
+            <AiFillLinkedin size={50} />
+          </a>
+          <a className="icon">
+            <SiGmail size={50} />
+          </a>
+        </div> */
+}
