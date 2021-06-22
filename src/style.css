@@ -85,7 +85,10 @@ body {
   color: var(--color-text);
   background-color: var(--bg);
 }
-
+html,
+body {
+  scroll-behavior: smooth;
+}
 /* body.dark {
   --bg: #282c35;
   --color-heading: #fff;
@@ -349,6 +352,10 @@ a:focus {
   scrollbar-width: none;  /* Firefox */
 }
 
+.active {
+  color:green;
+  background-color: red;
+}
 /* Media queries */
 
 @media (max-width: 42rem) {
