@@ -1,13 +1,19 @@
 import React, { useEffect } from "react"
-/* import { Link } from "gatsby"
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai"
 import { SiGmail } from "react-icons/si"
-import Projects from "../components/portfolio/projects"
-*/
+
+import {
+  Aboutme,
+  Experience,
+  Projects,
+  Skills,
+  Tools,
+  Contact,
+} from "../components/portfolio"
 
 const LandingPage = ({ data, location }) => {
   const aboutRef = React.useRef(null)
@@ -81,129 +87,53 @@ const LandingPage = ({ data, location }) => {
                   </a>
                 </ul>
               </nav>
+              <div className="flex ">
+                <a
+                  href="https://github.com/ouss4m4"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillGithub size={40} />
+                </a>
+                <a
+                  href="https://twitter.com/0uss4m4"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillTwitterCircle size={40} />
+                </a>
+                <a
+                  href="https://linkedin.com/in/bzouss"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillLinkedin size={40} />
+                </a>
+                <a>
+                  <SiGmail size={40} />
+                </a>
+              </div>
             </div>
           </div>
           {/* Main Content */}
           <main className="overflow-y-auto max-h-screen no-scrollbar">
             <section ref={aboutRef} id="about" className="min-h-screen">
-              <div className="container">
-                <h1>Baaziz Oussama</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-                <hr />
-                <br />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-              </div>
+              <Aboutme />
             </section>
             <section ref={expRef} id="experience" className="min-h-screen">
-              <div className="container">
-                <h1>Experience</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-                <hr />
-                <br />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-              </div>
+              <Experience />
             </section>
             <section ref={projRef} id="projects" className="min-h-screen">
-              <div className="container">
-                <div className="card">
-                  <h1>Projects</h1>
-                  <h3>SnapShot</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptate animi soluta quasi atque laudantium possimus cum
-                    maxime obcaecati illo deleniti exercitationem at facere
-                    dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                    alias.
-                  </p>
-                </div>
-              </div>
+              <Projects />
             </section>
             <section ref={skillRef} id="skills" className="min-h-screen">
-              <div className="container">
-                <h1>Skills</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-                <hr />
-                <br />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-              </div>
+              <Skills />
             </section>
             <section ref={toolsRef} id="tools" className="min-h-screen">
-              <div className="container">
-                <h1>Tools</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-                <hr />
-                <br />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-              </div>
+              <Tools />
             </section>
             <section ref={contactRef} id="contact" className="min-h-screen">
-              <div className="container">
-                <h1>Contact</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-                <hr />
-                <br />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate animi soluta quasi atque laudantium possimus cum
-                  maxime obcaecati illo deleniti exercitationem at facere
-                  dolorum, excepturi, incidunt aliquam voluptatum voluptas
-                  alias.
-                </p>
-              </div>
+              <Contact />
             </section>
           </main>
         </div>
@@ -243,20 +173,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-{
-  /* <div className="social">
-          <a href="https://github.com/ouss4m4" className="icon">
-            <AiFillGithub size={50} />
-          </a>
-          <a href="https://twitter.com/0uss4m4" className="icon">
-            <AiFillTwitterCircle size={50} />
-          </a>
-          <a href="https://linkedin.com/in/bzouss" className="icon">
-            <AiFillLinkedin size={50} />
-          </a>
-          <a className="icon">
-            <SiGmail size={50} />
-          </a>
-        </div> */
-}
