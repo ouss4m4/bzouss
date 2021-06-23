@@ -8,9 +8,3 @@ import "prismjs/themes/prism.css"
 import "./src/css/index.css"
 // custom CSS styles
 import "./src/style.css"
-
-var smoothscroll = require("smoothscroll-polyfill")
-
-export function onClientEntry() {
-  smoothscroll.polyfill()
-}
