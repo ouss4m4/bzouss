@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Header from "./header/header"
 
 const Layout = ({ location, title, children }) => {

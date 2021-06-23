@@ -5,7 +5,7 @@ import {
   AiFillGithub,
 } from "react-icons/ai"
 import { SiGmail } from "react-icons/si"
-
+import scrollTo from "gatsby-plugin-smoothscroll"
 import {
   Aboutme,
   Experience,
@@ -32,7 +32,7 @@ const LandingPage = ({ data, location }) => {
       observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           const navElement = document.querySelector(
-            `a[href="#${entry.target.id}"]`
+            `button[data-value="${entry.target.id}"]`
           )
 
           if (entry.isIntersecting) {
@@ -67,24 +67,66 @@ const LandingPage = ({ data, location }) => {
               </div>
               <nav>
                 <ul className="flex-col gap-8">
-                  <a className="block" href="#about">
-                    About
-                  </a>
-                  <a className="block" href="#experience">
-                    Experience
-                  </a>
-                  <a className="block" href="#projects">
-                    Projects
-                  </a>
-                  <a className="block" href="#skills">
-                    Skills
-                  </a>
-                  <a className="block" href="#tools">
-                    Tools
-                  </a>
-                  <a className="block" href="#contact">
-                    Contact
-                  </a>
+                  <li>
+                    <button
+                      className="block"
+                      tabIndex={-42}
+                      data-value="about"
+                      onClick={() => scrollTo("#about")}
+                    >
+                      <span>About</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className="block"
+                      tabIndex={-42}
+                      data-value="experience"
+                      onClick={() => scrollTo("#experience")}
+                    >
+                      <span>Experience</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className="block"
+                      tabIndex={-42}
+                      data-value="projects"
+                      onClick={() => scrollTo("#projects")}
+                    >
+                      <span>Projects</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className="block"
+                      tabIndex={-42}
+                      data-value="skills"
+                      onClick={() => scrollTo("#skills")}
+                    >
+                      <span>Skills</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className="block"
+                      tabIndex={-42}
+                      data-value="tools"
+                      onClick={() => scrollTo("#tools")}
+                    >
+                      <span>Tools</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className="block"
+                      tabIndex={-42}
+                      data-value="contact"
+                      onClick={() => scrollTo("#contact")}
+                    >
+                      <span>Contact</span>
+                    </button>
+                  </li>
                 </ul>
               </nav>
               <div className="flex ">
@@ -109,7 +151,7 @@ const LandingPage = ({ data, location }) => {
                 >
                   <AiFillLinkedin size={40} />
                 </a>
-                <a>
+                <a href="/#">
                   <SiGmail size={40} />
                 </a>
               </div>
