@@ -1,4 +1,5 @@
 import React from "react"
+import { ProjectCard } from "./ProjectCard"
 
 const Projects = () => {
   return (
@@ -6,13 +7,12 @@ const Projects = () => {
       <div className="container">
         <div className="card">
           <h1>Projects</h1>
-          <h3>SnapShot</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            animi soluta quasi atque laudantium possimus cum maxime obcaecati
-            illo deleniti exercitationem at facere dolorum, excepturi, incidunt
-            aliquam voluptatum voluptas alias.
-          </p>
+          <ProjectCard
+            title="SnapShot"
+            desc="Full Stack projects allows users to browse images. requires login to post and comment on other people photos. hosted on Heroku Free Tier slows the initial load"
+            tags={["Heroku", "MongoDB", "React", "Express"]}
+            imgName={"snapshot-mern"}
+          />
         </div>
       </div>
     </>
