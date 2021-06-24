@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const FluidImg = ({ filename, alt }) => (
+const FluidImg = ({ filename, alt, className }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -29,14 +29,7 @@ const FluidImg = ({ filename, alt }) => (
       if (!image) return null
 
       const imageFluid = image.node.childImageSharp.fluid
-      return (
-        <Img
-          className="rounded"
-          style={{ height: "100%" }}
-          alt={alt}
-          fluid={imageFluid}
-        />
-      )
+      return <Img className={className} alt={alt} fluid={imageFluid} />
     }}
   />
 )

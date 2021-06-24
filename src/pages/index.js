@@ -161,22 +161,30 @@ const LandingPage = ({ data, location }) => {
           </div>
           {/* Main Content */}
           <main className="overflow-y-auto max-h-screen no-scrollbar">
-            <section ref={aboutRef} id="about" className="min-h-screen">
+            <section ref={aboutRef} id="about" className="min-h-screen pt-3">
               <Aboutme />
             </section>
-            <section ref={expRef} id="experience" className="min-h-screen">
+            <section
+              ref={expRef}
+              id="experience"
+              className="min-h-screen pt-3 "
+            >
               <Experience />
             </section>
-            <section ref={projRef} id="projects" className="min-h-screen">
+            <section ref={projRef} id="projects" className="min-h-screen pt-3">
               <Projects />
             </section>
-            <section ref={skillRef} id="skills" className="min-h-screen">
+            <section ref={skillRef} id="skills" className="min-h-screen pt-3">
               <Skills />
             </section>
-            <section ref={toolsRef} id="tools" className="min-h-screen">
+            <section ref={toolsRef} id="tools" className="min-h-screen pt-3">
               <Tools />
             </section>
-            <section ref={contactRef} id="contact" className="min-h-screen">
+            <section
+              ref={contactRef}
+              id="contact"
+              className="min-h-screen pt-3"
+            >
               <Contact />
             </section>
           </main>

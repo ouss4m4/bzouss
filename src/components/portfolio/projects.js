@@ -24,21 +24,19 @@ const Projects = () => {
   return (
     <>
       <div className="container">
-        <div className="card">
-          <h1>Projects</h1>
-          <div className="flex">
-            {projects.map((p, i) => (
-              <ProjectCard
-                title={p.title}
-                desc={p.desc}
-                tags={p.tags}
-                imgName={p.imgName}
-                code={p.code}
-                live={p.live}
-                key={p.imgName}
-              />
-            ))}
-          </div>
+        <h1>Projects</h1>
+        <div className="flex flex-wrap max-w-sm justify-center">
+          {projects.map((p, i) => (
+            <ProjectCard
+              title={p.title}
+              desc={p.desc}
+              tags={p.tags}
+              imgName={p.imgName}
+              code={p.code}
+              live={p.live}
+              key={p.imgName + i}
+            />
+          ))}
         </div>
       </div>
     </>
