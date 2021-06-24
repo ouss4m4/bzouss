@@ -3,7 +3,6 @@ import FluidIMG from "../../images/FluidIMG"
 
 export const ProjectCard = ({ title, imgName, desc, live, code, tags }) => {
   function renderTags(tags) {
-    console.log("rendering tags", tags)
     return (
       <div className="px-6 pt-4 pb-2">
         {tags.map((t, i) => (
