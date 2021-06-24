@@ -1,9 +1,9 @@
 import React from "react"
 import FluidIMG from "../../images/FluidIMG"
 
-export const ProjectCard = ({ title, imgName, desc, tags }) => {
-  tags = tags ? tags : []
+export const ProjectCard = ({ title, imgName, desc, live, code, tags }) => {
   function renderTags(tags) {
+    console.log("rendering tags", tags)
     return (
       <div className="px-6 pt-4 pb-2">
         {tags.map((t, i) => (
@@ -20,13 +20,33 @@ export const ProjectCard = ({ title, imgName, desc, tags }) => {
   return (
     <>
       <div className="p-10">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <div className="w-full">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg  h-full">
+          <div className="w-full flex-grow">
             <FluidIMG filename={imgName} />
           </div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{title}</div>
             <p className="text-gray-700 text-base">{desc}</p>
+          </div>
+          <div className="flex justify-center gap-10">
+            {live && (
+              <a
+                href={live}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              >
+                Live
+              </a>
+            )}
+            <a
+              href={code}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+            >
+              Code
+            </a>
           </div>
           {renderTags(tags)}
         </div>

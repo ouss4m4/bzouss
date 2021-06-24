@@ -1,18 +1,44 @@
 import React from "react"
 import { ProjectCard } from "./ProjectCard"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Projects = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          projects {
+            title
+            desc
+            imgName
+            code
+            live
+            tags
+          }
+        }
+      }
+    }
+  `)
+  const projects = data.site.siteMetadata.projects
   return (
     <>
       <div className="container">
         <div className="card">
           <h1>Projects</h1>
-          <ProjectCard
-            title="SnapShot"
-            desc="Full Stack projects allows users to browse images. requires login to post and comment on other people photos. hosted on Heroku Free Tier slows the initial load"
-            tags={["Heroku", "MongoDB", "React", "Express"]}
-            imgName={"snapshot-mern"}
-          />
+          <div className="flex">
+            {projects.map((p, i) => (
+              <ProjectCard
+                title={p.title}
+                desc={p.desc}
+                tags={p.tags}
+                imgName={p.imgName}
+                code={p.code}
+                live={p.live}
+                key={p.imgName}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>

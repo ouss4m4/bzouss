@@ -22,16 +22,9 @@ const FluidImg = ({ filename, alt }) => (
       }
     `}
     render={data => {
-      const image = data.images.edges.find(n => {
-        console.log(
-          "test",
-          n.node.relativePath,
-          "includes",
-          filename,
-          n.node.relativePath.includes(filename)
-        )
-        return n.node.relativePath.includes(filename)
-      })
+      const image = data.images.edges.find(n =>
+        n.node.relativePath.includes(filename)
+      )
 
       if (!image) return null
 
