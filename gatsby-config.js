@@ -5,11 +5,40 @@ module.exports = {
       name: `Baaziz Oussama`,
       summary: `Software Developer with a passion for clean code architecture and design patterns`,
     },
-    description: `Baaziz Oussama: Automation is life <3`,
+    description: `Baaziz Oussama. Breathe Oxygen and write code`,
     siteUrl: `https://bzouss.com`,
     social: {
       twitter: `0uss4m4`,
     },
+    projects: [
+      {
+        title: "SnapShot",
+        desc:
+          "Full Stack projects allows users to browse images. requires login to post and comment on other people photos. hosted on Heroku Free Tier slows the initial load",
+        tags: ["Heroku", "MongoDB", "React", "Express"],
+        imgName: "snapshot-mern",
+        code: "https://github.com/ouss4m4/snapShot",
+        live: "https://mern-app.herokuapp.com/",
+      },
+      {
+        title: "Shopping List",
+        desc:
+          "Flutter cross platform app to create a shopping list that contains the item name , quantity and add a photo if needed",
+        tags: ["Flutter", "Dart", "Android", "iOS"],
+        imgName: "task-tracker",
+        code: "https://github.com/ouss4m4/shopping_list",
+        live: "",
+      },
+      {
+        title: "Task Manager",
+        desc:
+          "Drag n Drop Task manager with persistance done in react deployed with Amazon Amplify",
+        tags: ["React", "React-dnd", "Amazon", "Amplify"],
+        imgName: "task-tracker",
+        code: "https://github.com/ouss4m4/Task-tracker",
+        live: "https://master.d3e64dmv8w4bbk.amplifyapp.com/",
+      },
+    ],
   },
   plugins: [
     {
