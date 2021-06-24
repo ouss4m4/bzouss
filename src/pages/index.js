@@ -6,6 +6,7 @@ import {
 } from "react-icons/ai"
 import { SiGmail } from "react-icons/si"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import SEO from "../components/seo"
 import {
   Aboutme,
   Experience,
@@ -57,6 +58,7 @@ const LandingPage = ({ data, location }) => {
 
   return (
     <>
+      <SEO title="Baaziz Oussama" />
       <div className="container">
         <div className="flex">
           {/* SideBar */}
