@@ -4,21 +4,28 @@ const Aboutme = () => {
   return (
     <>
       <div className="container">
-        <h1>Baaziz Oussama</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          animi soluta quasi atque laudantium possimus cum maxime obcaecati illo
-          deleniti exercitationem at facere dolorum, excepturi, incidunt aliquam
-          voluptatum voluptas alias.
-        </p>
-        <hr />
-        <br />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          animi soluta quasi atque laudantium possimus cum maxime obcaecati illo
-          deleniti exercitationem at facere dolorum, excepturi, incidunt aliquam
-          voluptatum voluptas alias.
-        </p>
+        <div className="max-w-xl text-justify mx-auto">
+          <h1>Baaziz Oussama</h1>
+          <p>Hello. My name is Oussama. I am a Web Developer.</p>
+          <p>
+            With a background in Control and Automation Engineering. My journey
+            in programing begin with a real world <b>traffic light system</b>{" "}
+            executed by a PLC{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Programmable_logic_controller"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (Programmable Logic Controller).
+            </a>
+          </p>
+          <p>
+            My childhood love for computers and working with MicroControllers
+            nourished my passion for Computer programming further more. Now i
+            develop websites and applications that help Companies moving to a
+            digital business.
+          </p>
+        </div>
       </div>
     </>
   )

@@ -12,6 +12,7 @@
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
   --maxWidth-wrapper: var(--maxWidth-2xl);
+  */
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -26,7 +27,7 @@
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
-  --spacing-32: 8rem; */
+  --spacing-32: 8rem;
   --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -85,10 +86,7 @@ body {
   color: var(--color-text);
   background-color: var(--bg);
 }
-html,
-body {
-  scroll-behavior: smooth;
-}
+
 /* body.dark {
   --bg: #282c35;
   --color-heading: #fff;
@@ -348,12 +346,12 @@ a:focus {
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .active {
-  color:green;
+  color: green;
   background-color: red;
 }
 /* Media queries */
