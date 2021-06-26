@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const FixedIMG = ({ filename, alt }) => (
+const FixedIMG = ({ filename, alt, className }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -31,7 +31,9 @@ const FixedIMG = ({ filename, alt }) => (
       if (!image) return null
 
       const imageFixed = image.node.childImageSharp.fixed
-      return <Img className="" alt={alt} fixed={imageFixed} />
+      return (
+        <Img className="" alt={alt} fixed={imageFixed} className={className} />
+      )
     }}
   />
 )
