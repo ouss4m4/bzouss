@@ -12,6 +12,8 @@ import electronLogo from "../../images/electron-logo.svg"
 import netlifyLogo from "../../images/netlify-logo.svg"
 import awsLogo from "../../images/aws-logo.svg"
 import vsLogo from "../../images/vscode-logo.svg"
+import webpackLogo from "../../images/webpack-logo.svg"
+import gitLogo from "../../images/git-logo.svg"
 
 export const Tools = () => {
   return (
@@ -78,11 +80,11 @@ export const Tools = () => {
         <p className="m-0">DevTools</p>
         <div className="flex gap-4 justify-center">
           <div className="flex-col ">
-            <img className="w-20 h-20" src={electronLogo} />
+            <img className="w-20 h-20" src={gitLogo} />
             <span>Git</span>
           </div>
           <div className="flex-col ">
-            <img className="w-20 h-20" src={electronLogo} />
+            <img className="w-20 h-20" src={webpackLogo} />
             <span>Webpack</span>
           </div>
           <div className="flex-col ">
