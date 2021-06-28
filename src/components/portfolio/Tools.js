@@ -1,51 +1,113 @@
 import React from "react"
-import FluidIMG from "../../images/FluidIMG"
+import gatsbyLogo from "../../images/gatsby-logo.svg"
+import reactLogo from "../../images/react-logo.svg"
+import angularLogo from "../../images/angular-logo.svg"
+import tsLogo from "../../images/ts-logo.svg"
+import nodeLogo from "../../images/node-logo.svg"
+import expressLogo from "../../images/express-logo.svg"
+import mongodbLogo from "../../images/mongodb-logo.svg"
+import nativescriptLogo from "../../images/nativescript-logo.svg"
+import flutterLogo from "../../images/flutter-logo.svg"
+import electronLogo from "../../images/electron-logo.svg"
+import netlifyLogo from "../../images/netlify-logo.svg"
+import awsLogo from "../../images/aws-logo.svg"
+import vsLogo from "../../images/vscode-logo.svg"
 
 export const Tools = () => {
   return (
     <div className="container">
       <h1>Tools</h1>
-      <div className="grid text-center">
-        <p>FrontEnd</p>
+      <div className="grid gap-y-16 gap-x-2 grid-cols-tools  place-content-center place-items-center">
+        <p className="m-0">FrontEnd</p>
         <div className="flex gap-4 justify-center">
           <div className="flex-col ">
-            <FluidIMG filename="angular-log" />
+            <img className="w-20 h-20" src={angularLogo} />
+
             <span>Angular</span>
           </div>
           <div className="flex-col ">
-            <FluidIMG filename="react-log" />
+            <img className="w-20 h-20" src={reactLogo} />
             <span>React</span>
           </div>
-          <span>Gatsby</span>
-          <span>Typescript</span>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={gatsbyLogo} />
+            <span>Gatsby</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={tsLogo} />
+            <span>Typescript</span>
+          </div>
         </div>
-        <p>BackEnd</p>
+        <p className="m-0">BackEnd</p>
         <div className="flex gap-4 justify-center">
-          <span>Node</span>
-          <span>Express</span>
-          <span>MongoDB</span>
-          <span>Typescript</span>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={nodeLogo} />
+            <span>Node</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={expressLogo} />
+            <span>Express</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={mongodbLogo} />
+            <span>MongoDB</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={tsLogo} />
+            <span>Typescript</span>
+          </div>
         </div>
-        <p>Mobile Apps</p>
+        <p className="m-0">DevOps</p>
         <div className="flex gap-4 justify-center">
-          <span>NativeScript</span>
-          <span>Flutter</span>
+          <div className="flex-col ">
+            <img
+              className="w-20 h-20"
+              src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-standard.svg"
+            />
+            <span>Firebase</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={netlifyLogo} />
+            <span>Netlify</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={awsLogo} />
+            <span>AWS</span>
+          </div>
         </div>
-        <p>Desktop Apps</p>
+        <p className="m-0">DevTools</p>
         <div className="flex gap-4 justify-center">
-          <span>Electron</span>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={electronLogo} />
+            <span>Git</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={electronLogo} />
+            <span>Webpack</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={vsLogo} />
+            <span>VSCODE</span>
+          </div>
         </div>
-        <p>DevOps</p>
+        <p className="m-0">Mobile Apps</p>
         <div className="flex gap-4 justify-center">
-          <span>Firebase</span>
-          <span>Netlify</span>
-          <span>Amazon</span>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={nativescriptLogo} />
+            <span>NativeScript</span>
+          </div>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={flutterLogo} />
+            <span>Flutter</span>
+          </div>
         </div>
-        <p>DevTools</p>
+
+        <p className="m-0">Desktop Apps</p>
         <div className="flex gap-4 justify-center">
-          <span>Git</span>
-          <span>Webpack</span>
-          <span>Rsync</span>
+          <div className="flex-col ">
+            <img className="w-20 h-20" src={electronLogo} />
+            <span>Electron</span>
+          </div>
         </div>
       </div>
     </div>

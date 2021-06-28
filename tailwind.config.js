@@ -2,7 +2,12 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        // Complex site-specific column configuration
+        tools: "1fr 3fr",
+      },
+    },
     container: {
       center: true,
       padding: "1rem",
