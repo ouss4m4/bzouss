@@ -18,8 +18,8 @@ export const ProjectCard = ({ title, imgName, desc, live, code, tags }) => {
   }
   return (
     <>
-      <div className="p-10">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg  h-full">
+      <div className="p-8">
+        <div className="max-w-xl rounded overflow-hidden shadow-lg  h-full">
           <div className="w-full flex-grow">
             <FluidIMG filename={imgName} />
           </div>
@@ -27,7 +27,7 @@ export const ProjectCard = ({ title, imgName, desc, live, code, tags }) => {
             <div className="font-bold text-xl mb-2">{title}</div>
             <p className="text-gray-700 text-base">{desc}</p>
           </div>
-          <div className="flex justify-center gap-10">
+          <div className="px-6 flex gap-2 ">
             {live && (
               <a
                 href={live}
