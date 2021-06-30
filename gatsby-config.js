@@ -38,6 +38,15 @@ module.exports = {
         code: "https://github.com/ouss4m4/Task-tracker",
         live: "https://master.d3e64dmv8w4bbk.amplifyapp.com/",
       },
+      {
+        title: "DigIncome.com",
+        desc:
+          "Blog i built for my  friend to write about his digital income adventures. to be converted to a JAM stack for publishing articles",
+        tags: ["Gatsby", "Netlify", "MarkDown", "Amplify"],
+        imgName: "digincome-proj",
+        code: "https://github.com/ouss4m4/digincome",
+        live: "https://digincome.com/",
+      },
     ],
   },
   plugins: [
