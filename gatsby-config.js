@@ -16,7 +16,7 @@ module.exports = {
         desc:
           "Full Stack projects allows users to browse images. requires login to post and comment on other people photos. hosted on Heroku Free Tier slows the initial load",
         tags: ["Heroku", "MongoDB", "React", "Express"],
-        imgName: "snapshot-mern",
+        imgName: "snapshot-proj",
         code: "https://github.com/ouss4m4/snapShot",
         live: "https://mern-app.herokuapp.com/",
       },
@@ -25,7 +25,7 @@ module.exports = {
         desc:
           "Flutter cross platform app to create a shopping list that contains the item name , quantity and add a photo if needed",
         tags: ["Flutter", "Dart", "Android", "iOS"],
-        imgName: "task-tracker",
+        imgName: "flutter-proj",
         code: "https://github.com/ouss4m4/shopping_list",
         live: "",
       },
@@ -34,7 +34,7 @@ module.exports = {
         desc:
           "Drag n Drop Task manager with persistance done in react deployed with Amazon Amplify",
         tags: ["React", "React-dnd", "Amazon", "Amplify"],
-        imgName: "task-tracker",
+        imgName: "tasks-proj",
         code: "https://github.com/ouss4m4/Task-tracker",
         live: "https://master.d3e64dmv8w4bbk.amplifyapp.com/",
       },

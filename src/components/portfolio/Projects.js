@@ -25,7 +25,7 @@ const Projects = () => {
     <>
       <div className="container">
         <h1>Projects</h1>
-        <div className="flex flex-wrap max-w-sm justify-center">
+        <div className="flex flex-wrap justify-center">
           {projects.map((p, i) => (
             <ProjectCard
               title={p.title}
