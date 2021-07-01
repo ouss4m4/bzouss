@@ -16,7 +16,15 @@ export const Contact = () => {
           </div>
           <div className="mt-8 text-center"></div>
         </div>
-        <form name="contact" method="POST" data-netlify="true">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="#"
+        >
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
           <div>
             <span className="uppercase text-sm text-gray-600 font-bold">
               Full Name
