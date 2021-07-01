@@ -27,7 +27,7 @@ module.exports = {
         tags: ["Flutter", "Dart", "Android", "iOS"],
         imgName: "flutter-proj",
         code: "https://github.com/ouss4m4/shopping_list",
-        live: "",
+        live: "https://shop-together-8d5e3.web.app/",
       },
       {
         title: "Task Manager",
