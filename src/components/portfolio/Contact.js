@@ -1,6 +1,36 @@
-import React from "react"
+import React, { useState } from "react"
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
 export const Contact = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [msg, setMsg] = useState("")
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    const body = encode({
+      "form-name": form.getAttribute("name"),
+      name,
+      email,
+      message: msg,
+    })
+    console.log(body)
+    console.log(name)
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
+    })
+      .then(res => {
+        alert("Thank you for reaching out")
+      })
+      .catch(error => alert(error))
+  }
   return (
     <div className="container border border-indigo-600">
       <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
@@ -22,6 +52,7 @@ export const Contact = () => {
           data-netlify="true"
           netlify-honeypot="bot-field"
           action="#"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
@@ -34,6 +65,7 @@ export const Contact = () => {
               type="text"
               placeholder=""
               name="name"
+              onChange={e => setName(e.target.value)}
             />
           </div>
           <div className="mt-8">
@@ -44,6 +76,7 @@ export const Contact = () => {
               className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="email"
               name="email"
+              onChange={e => setEmail(e.target.value)}
             />
           </div>
           <div className="mt-8">
@@ -53,6 +86,7 @@ export const Contact = () => {
             <textarea
               name="message"
               className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              onChange={e => setMsg(e.target.value)}
             ></textarea>
           </div>
           <div className="mt-8">
