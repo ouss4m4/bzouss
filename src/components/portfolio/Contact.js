@@ -19,32 +19,31 @@ export const Contact = () => {
       email,
       message: msg,
     })
-    console.log(body)
-    console.log(name)
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body,
     })
-      .then(res => {
+      .then(() => {
+        setName("")
+        setMsg("")
+        setEmail("")
         alert("Thank you for reaching out")
       })
       .catch(error => alert(error))
   }
   return (
-    <div className="container border border-indigo-600">
-      <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
-        <div className="flex flex-col justify-between">
+    <div className="container">
+      <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-12 py-16 mx-auto bg-gray-100  rounded-lg shadow-lg">
+        <div className="flex flex-col justify-start text-center">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-              Lets talk about everything!
+              Lets talk about it!
             </h2>
             <div className="text-gray-700 mt-8">
-              Hate forms? Send us an <span className="underline">email</span>{" "}
-              instead.
+              whatever you're thinking about.
             </div>
           </div>
-          <div className="mt-8 text-center"></div>
         </div>
         <form
           name="contact"
@@ -66,6 +65,8 @@ export const Contact = () => {
               placeholder=""
               name="name"
               onChange={e => setName(e.target.value)}
+              value={name}
+              required={true}
             />
           </div>
           <div className="mt-8">
@@ -77,6 +78,8 @@ export const Contact = () => {
               type="email"
               name="email"
               onChange={e => setEmail(e.target.value)}
+              value={email}
+              required={true}
             />
           </div>
           <div className="mt-8">
@@ -85,8 +88,10 @@ export const Contact = () => {
             </span>
             <textarea
               name="message"
-              className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full h-64 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               onChange={e => setMsg(e.target.value)}
+              value={msg}
+              required={true}
             ></textarea>
           </div>
           <div className="mt-8">
