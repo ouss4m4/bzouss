@@ -8,10 +8,6 @@ const Aboutme = () => {
         <h1 className="text-center">Baaziz Oussama</h1>
         <div className="p-10">
           <div>
-            <FluidIMG
-              filename="profile-pic"
-              className="rounded w-80 h-80 mx-auto"
-            />
             <div className="max-w-xl text-center mx-auto">
               <p>Hello. My name is Oussama. I am a Web Developer.</p>
               <p>

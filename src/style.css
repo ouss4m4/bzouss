@@ -257,7 +257,10 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
-
+button:focus {
+  outline: none;
+  border: none;
+}
 /* Custom classes */
 
 .global-wrapper {
@@ -351,8 +354,9 @@ a:focus {
 }
 
 .active {
-  color: green;
-  background-color: red;
+  border-bottom: 3px solid #005b99;
+  outline: none;
+  padding-bottom: 3px;
 }
 /* Media queries */
 

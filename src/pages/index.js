@@ -1,9 +1,10 @@
-import React, { useEffect } from "react"
+import React /*  ,{ useEffect } */ from "react"
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai"
+import FluidIMG from "../images/FluidIMG"
 import { SiGmail } from "react-icons/si"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import SEO from "../components/seo"
@@ -24,7 +25,7 @@ const LandingPage = ({ data, location }) => {
   const toolsRef = React.useRef(null)
   const contactRef = React.useRef(null)
 
-  useEffect(() => {
+  /* useEffect(() => {
     let observer
     if (aboutRef && expRef && projRef && skillRef && toolsRef && contactRef) {
       const options = {
@@ -54,7 +55,7 @@ const LandingPage = ({ data, location }) => {
       observer.observe(contactRef.current)
     }
     return () => observer.disconnect()
-  }, [aboutRef, expRef, projRef, skillRef, toolsRef, contactRef])
+  }, [aboutRef, expRef, projRef, skillRef, toolsRef, contactRef]) */
 
   return (
     <>
@@ -62,16 +63,24 @@ const LandingPage = ({ data, location }) => {
       <div className="container">
         <div className="flex">
           {/* SideBar */}
-          <div className="border-r-2 w-60 h-screen">
+          <div className="border-r-2 w-60 h-screen text-center">
             <div className="flex-column">
-              <div className="my-14">
-                <h1 id="title">{data.site.siteMetadata.title}</h1>
+              {/* <div className="avatar">
+                <FluidIMG
+                  filename="profile-pic"
+                  className="rounded-full w-40 h-40 mx-auto mt-10 border"
+                />
+              </div> */}
+              <div className="">
+                <h1 id="title">Baaziz Oussama</h1>
               </div>
+              <p>Software Developer</p>
+
               <nav>
                 <ul className="flex-col gap-8">
                   <li>
                     <button
-                      className="block"
+                      className="block "
                       tabIndex={-42}
                       data-value="about"
                       onClick={() => scrollTo("#about")}
