@@ -16,9 +16,18 @@ module.exports = {
         desc:
           "Full Stack projects allows users to browse images. requires login to post and comment on other people photos. hosted on Heroku Free Tier slows the initial load",
         tags: ["Heroku", "MongoDB", "React", "Express"],
-        imgName: "snapshot-proj",
+        imgName: "snapshot800600",
         code: "https://github.com/ouss4m4/snapShot",
         live: "https://mern-app.herokuapp.com/",
+      },
+      {
+        title: "SalesOrder DDD API",
+        desc:
+          "Domain-Driven Design with Clean Architecture Concepts API to create Clients Items and Orders. Architecture understanding is the GOAL of the api not the data",
+        tags: ["Express", "Node", "MongoDB", "DDDesign"],
+        imgName: "dddsales800600",
+        code: "https://github.com/ouss4m4/ddd-sales",
+        live: "",
       },
       {
         title: "Shopping List",
@@ -37,6 +46,15 @@ module.exports = {
         imgName: "tasks-proj",
         code: "https://github.com/ouss4m4/Task-tracker",
         live: "https://master.d3e64dmv8w4bbk.amplifyapp.com/",
+      },
+      {
+        title: "Reactive Programming",
+        desc:
+          "With the introduction of React hooks. working with rxjs subscriptions it now easily maintainable and the result is a smooth UI/UX ",
+        tags: ["React", "RXJS", "Amplify"],
+        imgName: "rxjsreact800600",
+        code: "https://github.com/ouss4m4/react-ts",
+        live: "https://master.d25nu9lnqvdjkf.amplifyapp.com/",
       },
       {
         title: "DigIncome.com",
