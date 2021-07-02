@@ -20,7 +20,7 @@ export const ProjectCard = ({ title, imgName, desc, live, code, tags }) => {
     <>
       <div className="p-8">
         <div className="max-w-xl rounded overflow-hidden shadow-lg  h-full">
-          <div className="w-full flex-grow">
+          <div className="w-full flex-grow p-4">
             <FluidIMG filename={imgName} />
           </div>
           <div className="px-6 py-4">
