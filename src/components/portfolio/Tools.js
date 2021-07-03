@@ -18,7 +18,7 @@ import gitLogo from "../../images/git-logo.svg"
 export const Tools = () => {
   return (
     <div className="container">
-      <h1>Tools</h1>
+      <h1 className="text-center">Tools</h1>
       <div className="grid gap-y-16 gap-x-2 grid-cols-tools  place-content-center place-items-center">
         <p className="m-0">FrontEnd</p>
         <div className="flex gap-4 justify-center">

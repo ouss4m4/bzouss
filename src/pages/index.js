@@ -1,12 +1,12 @@
-import React /*  ,{ useEffect } */ from "react"
+import React from "react"
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from "react-icons/ai"
+import scrollTo from "gatsby-plugin-smoothscroll"
 import FluidIMG from "../images/FluidIMG"
 import { SiGmail } from "react-icons/si"
-import scrollTo from "gatsby-plugin-smoothscroll"
 import SEO from "../components/seo"
 import {
   Aboutme,
@@ -25,59 +25,31 @@ const LandingPage = ({ data, location }) => {
   const toolsRef = React.useRef(null)
   const contactRef = React.useRef(null)
 
-  /* useEffect(() => {
-    let observer
-    if (aboutRef && expRef && projRef && skillRef && toolsRef && contactRef) {
-      const options = {
-        threshold: 0.5,
-      }
-      observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          const navElement = document.querySelector(
-            `button[data-value="${entry.target.id}"]`
-          )
-
-          if (entry.isIntersecting) {
-            if (!navElement.classList.contains("active")) {
-              navElement.classList.add("active")
-            }
-          } else if (navElement.classList.contains("active")) {
-            navElement.classList.remove("active")
-          }
-        })
-      }, options)
-
-      observer.observe(aboutRef.current)
-      observer.observe(expRef.current)
-      observer.observe(projRef.current)
-      observer.observe(skillRef.current)
-      observer.observe(toolsRef.current)
-      observer.observe(contactRef.current)
-    }
-    return () => observer.disconnect()
-  }, [aboutRef, expRef, projRef, skillRef, toolsRef, contactRef]) */
-
   return (
     <>
       <SEO title="Baaziz Oussama" />
       <div className="container">
-        <div className="flex">
+        <div className="flex flex-col md:flex-row overflow-hidden">
           {/* SideBar */}
-          <div className="border-r-2 w-60 h-screen text-center">
-            <div className="flex-column">
-              {/* <div className="avatar">
-                <FluidIMG
-                  filename="profile-pic"
-                  className="rounded-full w-40 h-40 mx-auto mt-10 border"
-                />
-              </div> */}
-              <div className="">
-                <h1 id="title">Baaziz Oussama</h1>
-              </div>
-              <p>Software Developer</p>
+          <div className="w-full flex flex-col md:border-r-2 md:w-60 md:p-6 md:text-center md:bg-purple-50">
+            <FluidIMG
+              filename="profile-pic"
+              className="hidden md:block rounded-full w-40 h-40 mx-auto"
+            />
+            <p
+              id="title"
+              className="hidden md:block text-lg m-0 mt-4 font-bold"
+            >
+              Baaziz Oussama
+            </p>
+            <p className="hidden md:block  p-0 m-0 text-md ">
+              Software Developer
+            </p>
 
+            {/* Social buttons + nav */}
+            <div className="flex flex-col-reverse md:flex-col">
               <nav>
-                <ul className="flex-col gap-8">
+                <ul className="hidden md:flex md:flex-col my-12">
                   <li>
                     <button
                       className="block "
@@ -140,7 +112,8 @@ const LandingPage = ({ data, location }) => {
                   </li>
                 </ul>
               </nav>
-              <div className="flex ">
+
+              <div className="flex gap-2 m-0 pt-4 justify-center">
                 <a
                   href="https://github.com/ouss4m4"
                   target="_blank"
@@ -173,27 +146,19 @@ const LandingPage = ({ data, location }) => {
             <section ref={aboutRef} id="about" className="min-h-screen pt-3">
               <Aboutme />
             </section>
-            <section
-              ref={expRef}
-              id="experience"
-              className="min-h-screen pt-3 "
-            >
+            <section ref={expRef} id="experience" className="pt-3">
               <Experience />
             </section>
-            <section ref={projRef} id="projects" className="min-h-screen pt-3">
+            <section ref={projRef} id="projects" className="pt-3">
               <Projects />
             </section>
-            <section ref={skillRef} id="skills" className="min-h-screen pt-3">
+            <section ref={skillRef} id="skills" className="pt-3">
               <Skills />
             </section>
-            <section ref={toolsRef} id="tools" className="min-h-screen pt-3">
+            <section ref={toolsRef} id="tools" className="pt-3">
               <Tools />
             </section>
-            <section
-              ref={contactRef}
-              id="contact"
-              className="min-h-screen pt-3"
-            >
+            <section ref={contactRef} id="contact" className="pt-3">
               <Contact />
             </section>
           </main>
