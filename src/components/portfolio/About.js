@@ -5,11 +5,12 @@ const Aboutme = () => {
   return (
     <>
       <div className="container">
-        <h1 className="text-center">Baaziz Oussama</h1>
+        <h1 className="text-center m-0 p-0 md:pt-8">Baaziz Oussama</h1>
+        <p className="m-0 p-0 text-md text-center"> Software Developer</p>
         <div className="p-10">
           <div>
             <div className="max-w-xl text-center mx-auto">
-              <p>Hello. My name is Oussama. I am a Web Developer.</p>
+              <p>Hello. My name is Oussama. I am a.</p>
               <p>
                 With a background in Control and Automation Engineering. My
                 journey in programing begin with a real world{" "}
