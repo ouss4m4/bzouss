@@ -34,14 +34,14 @@ export const Contact = () => {
   }
   return (
     <div className="container">
-      <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-12 py-16 mx-auto bg-gray-100  rounded-lg shadow-lg">
+      <div className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-12 py-16 mx-auto ">
         <div className="flex flex-col justify-start text-center">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
-              Lets talk about it!
+              Get in touch!
             </h2>
             <div className="text-gray-700 mt-8">
-              whatever you're thinking about.
+              I will reply as soon as possible.
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export const Contact = () => {
               Full Name
             </span>
             <input
-              className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-gray-50 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"
               placeholder=""
               name="name"
@@ -74,7 +74,7 @@ export const Contact = () => {
               Email
             </span>
             <input
-              className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-gray-50 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="email"
               name="email"
               onChange={e => setEmail(e.target.value)}
@@ -88,14 +88,14 @@ export const Contact = () => {
             </span>
             <textarea
               name="message"
-              className="w-full h-64 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full h-64 bg-gray-50 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               onChange={e => setMsg(e.target.value)}
               value={msg}
               required={true}
             ></textarea>
           </div>
           <div className="mt-8">
-            <button className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+            <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
               Send Message
             </button>
           </div>

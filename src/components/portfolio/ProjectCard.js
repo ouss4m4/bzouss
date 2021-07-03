@@ -18,37 +18,35 @@ export const ProjectCard = ({ title, imgName, desc, live, code, tags }) => {
   }
   return (
     <>
-      <div className="p-8">
-        <div className="max-w-xl rounded overflow-hidden shadow-lg  h-full">
-          <div className="w-full flex-grow p-4">
-            <FluidIMG filename={imgName} />
-          </div>
-          <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{title}</div>
-            <p className="text-gray-700 text-base">{desc}</p>
-          </div>
-          <div className="px-6 flex gap-2 ">
-            {live && (
-              <a
-                href={live}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-              >
-                Live
-              </a>
-            )}
+      <div className="max-w-xl rounded overflow-hidden shadow-lg  h-full bg-white my-10">
+        <div className="w-full flex-grow p-4">
+          <FluidIMG filename={imgName} />
+        </div>
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">{title}</div>
+          <p className="text-gray-700 text-base">{desc}</p>
+        </div>
+        <div className="px-6 flex gap-2 ">
+          {live && (
             <a
-              href={code}
+              href={live}
               target="_blank"
               rel="noreferrer"
               className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
             >
-              Code
+              Live
             </a>
-          </div>
-          {renderTags(tags)}
+          )}
+          <a
+            href={code}
+            target="_blank"
+            rel="noreferrer"
+            className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          >
+            Code
+          </a>
         </div>
+        {renderTags(tags)}
       </div>
     </>
   )

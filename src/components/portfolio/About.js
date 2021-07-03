@@ -4,33 +4,16 @@ import FluidIMG from "../../images/FluidIMG"
 const Aboutme = () => {
   return (
     <>
-      <div className="container">
-        <h1 className="text-center m-0 p-0 md:pt-8">Baaziz Oussama</h1>
-        <p className="m-0 p-0 text-md text-center"> Software Developer</p>
-        <div className="p-10">
-          <div>
-            <div className="max-w-xl text-center mx-auto">
-              <p>Hello. My name is Oussama. I am a.</p>
-              <p>
-                With a background in Control and Automation Engineering. My
-                journey in programing begin with a real world{" "}
-                <b>traffic light system</b> executed by a PLC{" "}
-                <a
-                  href="https://en.wikipedia.org/wiki/Programmable_logic_controller"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  (Programmable Logic Controller).
-                </a>
-              </p>
-              <p>
-                My childhood love for computers and working with
-                MicroControllers nourished my passion for Computer programming
-                further more. Now i develop websites and applications that help
-                companies move to a digital business.
-              </p>
-            </div>
-          </div>
+      <div className="text-center">
+        <div className="mx-auto p-6 max-w-xl md:p-16  ">
+          <span>Hello. My name is</span>
+          <h1 className="m-0 p-0">Oussama baaziz </h1>
+          <p className="text-lg md:max-w-md md:text-justify pt-6">
+            I am a Software Developer at a pharmaceutical company. where we
+            develop and maintain softwares for the digital transformation of the
+            company. Following enterprise standards and architectures that help
+            us scale faster while respecting business rules.
+          </p>
         </div>
       </div>
     </>
