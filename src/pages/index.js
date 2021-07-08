@@ -1,4 +1,5 @@
 import React /* , { useEffect } */ from "react"
+import { Link } from "gatsby"
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
@@ -81,7 +82,7 @@ const LandingPage = ({ data, location }) => {
               {/* Social buttons + nav */}
               <div className="flex flex-col-reverse md:flex-col">
                 <nav>
-                  <ul className="hidden md:flex md:flex-col my-12">
+                  <ul className="hidden md:flex md:flex-col mt-12">
                     <li>
                       <button
                         className="block "
@@ -141,6 +142,26 @@ const LandingPage = ({ data, location }) => {
                       >
                         <span>Contact</span>
                       </button>
+                    </li>
+                    <li>
+                      <a
+                        style={{ textAlign: "left", color: "black" }}
+                        className="block"
+                        href="https://docs.google.com/document/d/1fNbYQ2YuIj38Rm0JkPM8DpHQvtJ419zkzAM-h7xOqKs/edit?usp=sharing"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Resume
+                      </a>
+                    </li>
+                    <li>
+                      <Link
+                        className="block"
+                        style={{ textAlign: "left", color: "black" }}
+                        to="/blog"
+                      >
+                        Blog
+                      </Link>{" "}
                     </li>
                   </ul>
                 </nav>
