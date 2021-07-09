@@ -20,7 +20,7 @@ module.exports = {
     fontFamily: {
       sans: ["Montserrat", "ui-sans-serif", "system-ui"],
       serif: ["Merriweather", "ui-serif", "Georgia"],
-      curisve: ["cursive"],
+      cursive: ["cursive"],
     },
   },
   variants: {
