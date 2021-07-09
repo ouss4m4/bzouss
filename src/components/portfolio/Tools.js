@@ -19,7 +19,7 @@ import fireLogo from "../../images/firebase-logo.svg"
 export const Tools = () => {
   return (
     <div className="container">
-      <h1 className="text-center">Tools</h1>
+      <h1 className="text-center font-serif">Tools</h1>
       <p className="text-center max-w-xl mx-auto">
         Frameworks and languages should be considered as tools. these are the
         tools i tend to opt for. but not limited to{" "}

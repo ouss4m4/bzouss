@@ -60,7 +60,7 @@ const LandingPage = ({ data, location }) => {
   return (
     <>
       <SEO title="Baaziz Oussama" />
-      <div>
+      <div className="font-sans">
         <div className="container">
           <div className="flex flex-col md:flex-row max-h-screen">
             {/* SideBar */}
