@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <>
       <div className="container">
-        <h1 className="text-center">Skills</h1>
+        <h1 className="text-center font-serif">Skills</h1>
         {/* Skill list */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Skill wrap */}

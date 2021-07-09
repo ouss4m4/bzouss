@@ -17,6 +17,11 @@ module.exports = {
         "2xl": "1124px",
       },
     },
+    fontFamily: {
+      sans: ["Montserrat", "ui-sans-serif", "system-ui"],
+      serif: ["Merriweather", "ui-serif", "Georgia"],
+      curisve: ["cursive"],
+    },
   },
   variants: {
     extend: {},

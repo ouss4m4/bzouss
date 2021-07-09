@@ -3,8 +3,8 @@ import React from "react"
 const Experience = () => {
   return (
     <>
-      <div className="container ">
-        <h1 className="text-center">Experience</h1>
+      <div className="container">
+        <h1 className="text-center font-serif">Experience</h1>
         <p className="text-center text-xl  ">
           <b>2018 - Present :</b> Software Developer at
           <a

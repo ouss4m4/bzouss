@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `BZouss`,
+    title: `Oussama Baaziz`,
     author: {
       name: `Baaziz Oussama`,
       summary: `Software Developer with a passion for clean code architecture and design patterns`,
     },
-    description: `Baaziz Oussama. Breathe Oxygen and write code`,
+    description: `Baaziz Oussama. Software Developer with a passion for clean code architecture and design patterns`,
     siteUrl: `https://bzouss.com`,
     social: {
       twitter: `0uss4m4`,
