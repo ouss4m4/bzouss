@@ -165,7 +165,26 @@ const LandingPage = ({ data, location }) => {
                     </li>
                   </ul>
                 </nav>
+                <hr />
 
+                <div className="flex items-center justify-center gap-5 my-3 md:hidden">
+                  <a
+                    style={{ textAlign: "left", color: "black" }}
+                    className="block"
+                    href="https://docs.google.com/document/d/1fNbYQ2YuIj38Rm0JkPM8DpHQvtJ419zkzAM-h7xOqKs/edit?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Resume
+                  </a>
+                  <Link
+                    className="block"
+                    style={{ textAlign: "left", color: "black" }}
+                    to="/blog"
+                  >
+                    Blog
+                  </Link>{" "}
+                </div>
                 <div className="flex gap-2 m-0 pt-4 justify-center">
                   <a
                     href="https://github.com/ouss4m4"
