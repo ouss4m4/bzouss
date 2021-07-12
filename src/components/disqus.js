@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 const DiscusArea = ({ id, title, location }) => {

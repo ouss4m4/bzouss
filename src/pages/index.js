@@ -1,5 +1,5 @@
-import React /* , { useEffect } */ from "react"
-import { Link } from "gatsby"
+import React from "react"
+import { graphql, Link } from "gatsby"
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
@@ -19,44 +19,6 @@ import {
 } from "../components/portfolio"
 
 const LandingPage = ({ data, location }) => {
-  const aboutRef = React.useRef(null)
-  const expRef = React.useRef(null)
-  const projRef = React.useRef(null)
-  const skillRef = React.useRef(null)
-  const toolsRef = React.useRef(null)
-  const contactRef = React.useRef(null)
-
-  /* useEffect(() => {
-    let observer
-    if (aboutRef && expRef && projRef && skillRef && toolsRef && contactRef) {
-      const options = {
-        threshold: 0.5,
-      }
-      observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          const navElement = document.querySelector(
-            `button[data-value="${entry.target.id}"]`
-          )
-
-          if (entry.isIntersecting) {
-            if (!navElement.classList.contains("active")) {
-              navElement.classList.add("active")
-            }
-          } else if (navElement.classList.contains("active")) {
-            navElement.classList.remove("active")
-          }
-        })
-      }, options)
-
-      observer.observe(aboutRef.current)
-      observer.observe(expRef.current)
-      observer.observe(projRef.current)
-      observer.observe(skillRef.current)
-      observer.observe(toolsRef.current)
-      observer.observe(contactRef.current)
-    }
-    return () => observer.disconnect()
-  }, [aboutRef, expRef, projRef, skillRef, toolsRef, contactRef]) */
   return (
     <>
       <SEO title="Baaziz Oussama" />
@@ -64,18 +26,19 @@ const LandingPage = ({ data, location }) => {
         <div className="container">
           <div className="flex flex-col md:flex-row max-h-screen">
             {/* SideBar */}
-            <div className="w-full flex flex-col  md:w-60 md:p-6 md:text-center ">
+            <div className="bg-w-full flex flex-col bg-transparent md:bg-indigo-50  md:bg-opacity-50  md:w-60 md:p-6 md:text-center ">
               <FluidIMG
-                filename="profile-pic"
+                filename="profile-pic600"
                 className="hidden md:block rounded-full w-40 h-40 mx-auto"
               />
+
               <p
                 id="title"
-                className="hidden md:block text-lg m-0 mt-4 font-bold"
+                className="hidden md:block text-lg m-0 mt-4 font-serif font-bold"
               >
                 Baaziz Oussama
               </p>
-              <p className="hidden md:block  p-0 m-0 text-md ">
+              <p className="hidden md:block  p-0 m-0 text-md font-serif">
                 Software Developer
               </p>
 
@@ -85,7 +48,7 @@ const LandingPage = ({ data, location }) => {
                   <ul className="hidden md:flex md:flex-col mt-12">
                     <li>
                       <button
-                        className="block "
+                        className="block font-serif "
                         tabIndex={-42}
                         data-value="about"
                         onClick={() => scrollTo("#about")}
@@ -95,7 +58,7 @@ const LandingPage = ({ data, location }) => {
                     </li>
                     <li>
                       <button
-                        className="block"
+                        className="block font-serif"
                         tabIndex={-42}
                         data-value="experience"
                         onClick={() => scrollTo("#experience")}
@@ -105,7 +68,7 @@ const LandingPage = ({ data, location }) => {
                     </li>
                     <li>
                       <button
-                        className="block"
+                        className="block font-serif"
                         tabIndex={-42}
                         data-value="projects"
                         onClick={() => scrollTo("#projects")}
@@ -115,7 +78,7 @@ const LandingPage = ({ data, location }) => {
                     </li>
                     <li>
                       <button
-                        className="block"
+                        className="block font-serif"
                         tabIndex={-42}
                         data-value="skills"
                         onClick={() => scrollTo("#skills")}
@@ -125,7 +88,7 @@ const LandingPage = ({ data, location }) => {
                     </li>
                     <li>
                       <button
-                        className="block"
+                        className="block font-serif"
                         tabIndex={-42}
                         data-value="tools"
                         onClick={() => scrollTo("#tools")}
@@ -135,7 +98,7 @@ const LandingPage = ({ data, location }) => {
                     </li>
                     <li>
                       <button
-                        className="block"
+                        className="block font-serif"
                         tabIndex={-42}
                         data-value="contact"
                         onClick={() => scrollTo("#contact")}
@@ -146,7 +109,7 @@ const LandingPage = ({ data, location }) => {
                     <li>
                       <a
                         style={{ textAlign: "left", color: "black" }}
-                        className="block"
+                        className="block font-serif"
                         href="https://docs.google.com/document/d/1fNbYQ2YuIj38Rm0JkPM8DpHQvtJ419zkzAM-h7xOqKs/edit?usp=sharing"
                         target="_blank"
                         rel="noreferrer"
@@ -156,7 +119,7 @@ const LandingPage = ({ data, location }) => {
                     </li>
                     <li>
                       <Link
-                        className="block"
+                        className="block font-serif"
                         style={{ textAlign: "left", color: "black" }}
                         to="/blog"
                       >
@@ -217,25 +180,24 @@ const LandingPage = ({ data, location }) => {
             {/* Main Content */}
             <main className="overflow-auto h-screen no-scrollbar">
               <section
-                ref={aboutRef}
                 id="about"
                 className="h-full pt-3 flex justify-center items-center"
               >
                 <Aboutme />
               </section>
-              <section ref={expRef} id="experience" className="pt-3">
+              <section id="experience" className="pt-3">
                 <Experience />
               </section>
-              <section ref={projRef} id="projects" className="pt-3">
+              <section id="projects" className="pt-3">
                 <Projects />
               </section>
-              <section ref={skillRef} id="skills" className="pt-3">
+              <section id="skills" className="pt-3">
                 <Skills />
               </section>
-              <section ref={toolsRef} id="tools" className="pt-3">
+              <section id="tools" className="pt-3">
                 <Tools />
               </section>
-              <section ref={contactRef} id="contact" className="pt-3">
+              <section id="contact" className="pt-3">
                 <Contact />
               </section>
             </main>
