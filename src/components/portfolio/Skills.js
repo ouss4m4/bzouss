@@ -28,7 +28,11 @@ const Skills = () => {
             <h3>Time Management</h3>
             <p className="max-w-lg mx-auto">
               My team uses{" "}
-              <a href="" rel="noreferrer" target="_blank">
+              <a
+                href="https://www.atlassian.com/software/jira"
+                rel="noreferrer"
+                target="_blank"
+              >
                 JIRA®
               </a>{" "}
               to Plan, track, and manage Software development. Creating sprints
