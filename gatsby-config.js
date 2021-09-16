@@ -14,6 +14,15 @@ module.exports = {
       {
         title: "SnapShot",
         desc:
+          "C# app to Track Tournaments, keep scores, and email participants about incoming games",
+        tags: ["C#", ".NET Core", "SQLServer", "WinForms"],
+        imgName: "TrackerSnapshot",
+        code: "https://github.com/ouss4m4/TournamentTracker",
+        live: "",
+      },
+      {
+        title: "SnapShot",
+        desc:
           "Full Stack projects allows users to browse images. requires login to post and comment on other people photos. hosted on Heroku Free Tier slows the initial load",
         tags: ["Heroku", "MongoDB", "React", "Express"],
         imgName: "snapshot800600",
