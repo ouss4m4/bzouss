@@ -12,7 +12,7 @@ module.exports = {
     },
     projects: [
       {
-        title: "SnapShot",
+        title: "Tournament Tracker",
         desc:
           "C# app to Track Tournaments, keep scores, and email participants about incoming games",
         tags: ["C#", ".NET Core", "SQLServer", "WinForms"],
