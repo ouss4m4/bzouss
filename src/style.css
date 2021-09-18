@@ -1,7 +1,7 @@
 /* CSS Custom Properties Definitions */
 
 :root {
-  --maxWidth-none: "none";
+  /* --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
   --maxWidth-sm: 24rem;
   --maxWidth-md: 28rem;
@@ -12,6 +12,7 @@
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
   --maxWidth-wrapper: var(--maxWidth-2xl);
+  */
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -86,7 +87,7 @@ body {
   background-color: var(--bg);
 }
 
-body.dark {
+/* body.dark {
   --bg: #282c35;
   --color-heading: #fff;
   --textNormal: hsla(0, 0%, 100%, 0.88);
@@ -99,7 +100,7 @@ body.dark {
   --color-accent: #ff42d6;
   --color-heading: #ff42d6;
   --color-text-light: #dadada;
-}
+} */
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
@@ -256,7 +257,10 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
-
+button:focus {
+  outline: none;
+  border: none;
+}
 /* Custom classes */
 
 .global-wrapper {
@@ -339,6 +343,21 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.active {
+  border-bottom: 3px solid #005b99;
+  outline: none;
+  padding-bottom: 3px;
+}
 /* Media queries */
 
 @media (max-width: 42rem) {

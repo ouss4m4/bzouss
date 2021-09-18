@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Header from "./header/header"
 
 const Layout = ({ location, title, children }) => {
@@ -7,7 +6,7 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className="container" data-is-root-path={isRootPath}>
       <Header />
       <main>{children}</main>
       <footer>
