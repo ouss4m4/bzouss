@@ -6,8 +6,8 @@ description: push based approach with React & Rxjs.
 
 I tried the Push Based Architecture last year and it helped me scale an Angular app nicely using Rxjs and async pipes (Angular subscriptions). coming to react i had to give it a try in this small app that fetches users on user interactions.
 
-![app preview](./snapshot.JPG)
-
+![app preview](./rxjsreact.JPG)
+ 
 ## Dummy api
 
 i used the lovely [https://dummyapi.io](https://dummyapi.io) for it's simplicity and free calls. and used the ajax call from RXJS instead of Fetch or Axios. to have a stream from the beginning.
