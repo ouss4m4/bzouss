@@ -36,7 +36,7 @@ module.exports = {
         tags: ["Express", "Node", "MongoDB", "DDDesign"],
         imgName: "dddsales800600",
         code: "https://github.com/ouss4m4/ddd-sales",
-        live: "https://ddd-sales.azurewebsites.net/api/v1/item",
+        live: "https://ddd-sales.azurewebsites.net/api/v1",
       },
       {
         title: "Shopping List",
