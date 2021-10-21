@@ -12,6 +12,14 @@ module.exports = {
     },
     projects: [
       {
+        title: "Sales Order Web App",
+        desc: "DotNET Api, React App, Deployed on Azure Sales Order WebAPP",
+        tags: ["C#",".NET Core","React","EF Core","Azure"],
+        imgName:"saleorder.JPG",
+        code: "https://github.com/ouss4m4/sales-order",
+        live: "https://salesorder-app.azurewebsites.net/orders"
+      },
+      {
         title: "Tournament Tracker",
         desc:
           "C# app to Track Tournaments, keep scores, and email participants about incoming games",
