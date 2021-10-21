@@ -14,10 +14,10 @@ module.exports = {
       {
         title: "Sales Order Web App",
         desc: "DotNET Api, React App, Deployed on Azure Sales Order WebAPP",
-        tags: ["C#",".NET Core","React","EF Core","Azure"],
-        imgName:"saleorder.JPG",
+        tags: ["C#", ".NET Core", "React", "EF Core", "Azure"],
+        imgName: "saleorder.JPG",
         code: "https://github.com/ouss4m4/sales-order",
-        live: "https://salesorder-app.azurewebsites.net/orders"
+        live: "https://salesorder-app.azurewebsites.net/orders",
       },
       {
         title: "Tournament Tracker",
@@ -72,15 +72,6 @@ module.exports = {
         imgName: "rxjsreact800600",
         code: "https://github.com/ouss4m4/react-ts",
         live: "https://master.d25nu9lnqvdjkf.amplifyapp.com/",
-      },
-      {
-        title: "DigIncome.com",
-        desc:
-          "Blog i built for my  friend to write about his digital income adventures. to be converted to a JAM stack for publishing articles",
-        tags: ["Gatsby", "Netlify", "MarkDown", "Amplify"],
-        imgName: "digincome-proj",
-        code: "https://github.com/ouss4m4/digincome",
-        live: "https://digincome.com/",
       },
     ],
   },
