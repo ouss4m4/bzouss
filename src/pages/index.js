@@ -110,7 +110,7 @@ const LandingPage = ({ data, location }) => {
                       <a
                         style={{ textAlign: "left", color: "black" }}
                         className="block font-serif"
-                        href="https://drive.google.com/file/d/137df678Vs69xgw4rLpnaLCN31pLfCKIm/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1vwrJkVirI0vyYeEqVKRVfA4O9yhtVHFe/view?usp=sharing"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -134,7 +134,7 @@ const LandingPage = ({ data, location }) => {
                   <a
                     style={{ textAlign: "left", color: "black" }}
                     className="block"
-                    href="https://docs.google.com/document/d/1fNbYQ2YuIj38Rm0JkPM8DpHQvtJ419zkzAM-h7xOqKs/edit?usp=sharing"
+                    href="https://drive.google.com/file/d/1vwrJkVirI0vyYeEqVKRVfA4O9yhtVHFe/view?usp=sharing"
                     target="_blank"
                     rel="noreferrer"
                   >
